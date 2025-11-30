@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Poppins', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
@@ -39,7 +41,7 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-gray-900 bg-white;
+    @apply font-sans antialiased text-gray-900 bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300;
   }
 
   h1,
